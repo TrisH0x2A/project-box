@@ -128,6 +128,7 @@ int main()
             move_asteroid(&asteroids[i]);
             if (asteroids[i].position.y == HEIGHT - 1)
             {
+		increase_score(&ship);
                 for (int j = i; j < num_asteroids - 1; j++)
                 {
                     asteroids[j] = asteroids[j + 1];
@@ -161,14 +162,6 @@ int main()
             {
                 game_over = true;
                 break;
-            }
-        }
-
-        for (int i = 0; i < num_asteroids; i++)
-        {
-            if (asteroids[i].position.y == HEIGHT - 1)
-            {
-                increase_score(&ship);
             }
         }
     }
