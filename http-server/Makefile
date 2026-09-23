@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -O2
-SRC = webserver.c
+SRC = server.c
 TARGET = webserver
 
 
